@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="kebp.xyz, kebp">
+    <meta name="description" content="This website contains the various projects of a mediocre computer science student">
+    <meta name="Author" content="Kevin C">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Blackjack
+    </title>
+</head>
+<body class="body">
+    <header>
+        <h1><a href="../../index.html"><img src="../../testing/content/K_Logo.png" alt="klogo" style="width: 60px;"></a> Blackjack</h1>
+    </header>
+    <div id="startBtn" class="game">
+        <a id="startBtn1" class="button1" onclick="blackjack.Blackjack()" href="#" style="font-size: 30pt;">Start Game</a>
+    </div>
+    <div id="game" class="game hidden"> <!-- Next add play button that unhides everything at the start -->
+        <a class="button1" href="#" onclick="blackjack.dealBtn();">DEAL</a><br>
+        <div class="dealerHand">
+            <div style="color: white; font-size: 16pt;">Dealer:&nbsp;<span id="dealerScore">0</span></div>
+            <img id="DBACK" src="./cards/back.jpg" class="hidden">
+            <img id="D1C" src="./cards/1C.jpg" class="hidden">
+            <img id="D2C" src="./cards/2C.jpg" class="hidden">
+            <img id="D3C" src="./cards/3C.jpg" class="hidden">
+            <img id="D4C" src="./cards/4C.jpg" class="hidden">
+            <img id="D5C" src="./cards/5C.jpg" class="hidden">
+            <img id="D6C" src="./cards/6C.jpg" class="hidden">
+            <img id="D7C" src="./cards/7C.jpg" class="hidden">
+            <img id="D8C" src="./cards/8C.jpg" class="hidden">
+            <img id="D9C" src="./cards/9C.jpg" class="hidden">
+            <img id="DTC" src="./cards/TC.jpg" class="hidden">
+            <img id="DJC" src="./cards/JC.jpg" class="hidden">
+            <img id="DQC" src="./cards/QC.jpg" class="hidden">
+            <img id="DKC" src="./cards/KC.jpg" class="hidden">
+            <img id="D1D" src="./cards/1D.jpg" class="hidden">
+            <img id="D2D" src="./cards/2D.jpg" class="hidden">
+            <img id="D3D" src="./cards/3D.jpg" class="hidden">
+            <img id="D4D" src="./cards/4D.jpg" class="hidden">
+            <img id="D5D" src="./cards/5D.jpg" class="hidden">
+            <img id="D6D" src="./cards/6D.jpg" class="hidden">
+            <img id="D7D" src="./cards/7D.jpg" class="hidden">
+            <img id="D8D" src="./cards/8D.jpg" class="hidden">
+            <img id="D9D" src="./cards/9D.jpg" class="hidden">
+            <img id="DTD" src="./cards/TD.jpg" class="hidden">
+            <img id="DJD" src="./cards/JD.jpg" class="hidden">
+            <img id="DQD" src="./cards/QD.jpg" class="hidden">
+            <img id="DKD" src="./cards/KD.jpg" class="hidden">
+            <img id="D1H" src="./cards/1H.jpg" class="hidden">
+            <img id="D2H" src="./cards/2H.jpg" class="hidden">
+            <img id="D3H" src="./cards/3H.jpg" class="hidden">
+            <img id="D4H" src="./cards/4H.jpg" class="hidden">
+            <img id="D5H" src="./cards/5H.jpg" class="hidden">
+            <img id="D6H" src="./cards/6H.jpg" class="hidden">
+            <img id="D7H" src="./cards/7H.jpg" class="hidden">
+            <img id="D8H" src="./cards/8H.jpg" class="hidden">
+            <img id="D9H" src="./cards/9H.jpg" class="hidden">
+            <img id="DTH" src="./cards/TH.jpg" class="hidden">
+            <img id="DJH" src="./cards/JH.jpg" class="hidden">
+            <img id="DQH" src="./cards/QH.jpg" class="hidden">
+            <img id="DKH" src="./cards/KH.jpg" class="hidden">
+            <img id="D1S" src="./cards/1S.jpg" class="hidden">
+            <img id="D2S" src="./cards/2S.jpg" class="hidden">
+            <img id="D3S" src="./cards/3S.jpg" class="hidden">
+            <img id="D4S" src="./cards/4S.jpg" class="hidden">
+            <img id="D5S" src="./cards/5S.jpg" class="hidden">
+            <img id="D6S" src="./cards/6S.jpg" class="hidden">
+            <img id="D7S" src="./cards/7S.jpg" class="hidden">
+            <img id="D8S" src="./cards/8S.jpg" class="hidden">
+            <img id="D9S" src="./cards/9S.jpg" class="hidden">
+            <img id="DTS" src="./cards/TS.jpg" class="hidden">
+            <img id="DJS" src="./cards/JS.jpg" class="hidden">
+            <img id="DQS" src="./cards/QS.jpg" class="hidden">
+            <img id="DKS" src="./cards/KS.jpg" class="hidden">
+        </div><br>
+        <div class="playerHand">
+            <div style="color: white; font-size: 16pt;">You:&nbsp;<span id="playerScore">0</span></div>
+            <img id="PBACK" src="./cards/back.jpg" class="hidden">
+            <img id="P1C" src="./cards/1C.jpg" class="hidden">
+            <img id="P2C" src="./cards/2C.jpg" class="hidden">
+            <img id="P3C" src="./cards/3C.jpg" class="hidden">
+            <img id="P4C" src="./cards/4C.jpg" class="hidden">
+            <img id="P5C" src="./cards/5C.jpg" class="hidden">
+            <img id="P6C" src="./cards/6C.jpg" class="hidden">
+            <img id="P7C" src="./cards/7C.jpg" class="hidden">
+            <img id="P8C" src="./cards/8C.jpg" class="hidden">
+            <img id="P9C" src="./cards/9C.jpg" class="hidden">
+            <img id="PTC" src="./cards/TC.jpg" class="hidden">
+            <img id="PJC" src="./cards/JC.jpg" class="hidden">
+            <img id="PQC" src="./cards/QC.jpg" class="hidden">
+            <img id="PKC" src="./cards/KC.jpg" class="hidden">
+            <img id="P1D" src="./cards/1D.jpg" class="hidden">
+            <img id="P2D" src="./cards/2D.jpg" class="hidden">
+            <img id="P3D" src="./cards/3D.jpg" class="hidden">
+            <img id="P4D" src="./cards/4D.jpg" class="hidden">
+            <img id="P5D" src="./cards/5D.jpg" class="hidden">
+            <img id="P6D" src="./cards/6D.jpg" class="hidden">
+            <img id="P7D" src="./cards/7D.jpg" class="hidden">
+            <img id="P8D" src="./cards/8D.jpg" class="hidden">
+            <img id="P9D" src="./cards/9D.jpg" class="hidden">
+            <img id="PTD" src="./cards/TD.jpg" class="hidden">
+            <img id="PJD" src="./cards/JD.jpg" class="hidden">
+            <img id="PQD" src="./cards/QD.jpg" class="hidden">
+            <img id="PKD" src="./cards/KD.jpg" class="hidden">
+            <img id="P1H" src="./cards/1H.jpg" class="hidden">
+            <img id="P2H" src="./cards/2H.jpg" class="hidden">
+            <img id="P3H" src="./cards/3H.jpg" class="hidden">
+            <img id="P4H" src="./cards/4H.jpg" class="hidden">
+            <img id="P5H" src="./cards/5H.jpg" class="hidden">
+            <img id="P6H" src="./cards/6H.jpg" class="hidden">
+            <img id="P7H" src="./cards/7H.jpg" class="hidden">
+            <img id="P8H" src="./cards/8H.jpg" class="hidden">
+            <img id="P9H" src="./cards/9H.jpg" class="hidden">
+            <img id="PTH" src="./cards/TH.jpg" class="hidden">
+            <img id="PJH" src="./cards/JH.jpg" class="hidden">
+            <img id="PQH" src="./cards/QH.jpg" class="hidden">
+            <img id="PKH" src="./cards/KH.jpg" class="hidden">
+            <img id="P1S" src="./cards/1S.jpg" class="hidden">
+            <img id="P2S" src="./cards/2S.jpg" class="hidden">
+            <img id="P3S" src="./cards/3S.jpg" class="hidden">
+            <img id="P4S" src="./cards/4S.jpg" class="hidden">
+            <img id="P5S" src="./cards/5S.jpg" class="hidden">
+            <img id="P6S" src="./cards/6S.jpg" class="hidden">
+            <img id="P7S" src="./cards/7S.jpg" class="hidden">
+            <img id="P8S" src="./cards/8S.jpg" class="hidden">
+            <img id="P9S" src="./cards/9S.jpg" class="hidden">
+            <img id="PTS" src="./cards/TS.jpg" class="hidden">
+            <img id="PJS" src="./cards/JS.jpg" class="hidden">
+            <img id="PQS" src="./cards/QS.jpg" class="hidden">
+            <img id="PKS" src="./cards/KS.jpg" class="hidden">
+        </div>
+        <div class="controls">
+            <a onclick="blackjack.hit()" class="button1" href="#">HIT</a>
+            <a onclick="blackjack.stand()" class="button2" href="#">STAND</a>
+        </div>
+        <div id="winMessage" class="hidden">You Win!</div>
+        <div id="lossMessage" class="hidden">You lose</div>
+        <div id="tieMessage" class="hidden">Tie</div>
+        <div id="playAgainBtn" class="hidden">
+            <a class="button1" onclick="blackjack.newGame()" href="#" style="font-size: 30pt;">New Game</a>
+        </div>
+    </div>
+    <div class="footer"></div>
+<!-- Script Link -->
+<script src="./scripts/card.js"></script>
+<script src="./scripts/deck.js"></script>
+<script src="./scripts/blackjack.js"></script>
+</body>
+</html>

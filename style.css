@@ -1,0 +1,135 @@
+header
+{
+    padding-left: 35px;
+    background-color: #99ffb2;
+    color: #3d6647;
+    border-left-style: solid;
+    border-left-color: #7acc8f;
+    border-left-width: 40px;
+    border-style: solid;
+    border-color: #7acc8f;
+    font-size: 25pt;
+}
+body
+{
+    background-color: rgb(238, 255, 226);
+}
+.game
+{
+    max-width: 800px;
+    margin: auto;
+    background-color: #3d6647;
+    padding: 30px;
+    text-align: center;
+    min-height: 100%;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-style: solid;
+    border-bottom-color: #7acc8f;
+    border-bottom-width: 10px;
+}
+.footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5c996b;
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+.hidden
+{
+    display: none;
+}
+
+a.button1
+{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#ffffff;
+    background-color: #444444;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button1:hover
+{
+    color:#00ff80;
+    background-color:#3d6647;
+}
+@media all and (max-width:30em)
+{
+    a.button1
+    {
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+a.button2
+{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#ffffff;
+    background-color: #444444;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button2:hover
+{
+    color:#ff5e35;
+    background-color:#5a0000;
+}
+@media all and (max-width:30em)
+{
+    a.button2
+    {
+        display:block;
+        margin:0.4em auto;
+    }
+}
+#winMessage
+{
+    font-size: 30pt;
+    color: #ffffff;
+    background-color: #68a15a;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+}
+#lossMessage
+{
+    font-size: 30pt;
+    color: #ffffff;
+    background-color: #ff6565;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+}
+#tieMessage
+{
+    font-size: 30pt;
+    color: #ffffff;
+    background-color: #707070;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+}
